@@ -1,8 +1,7 @@
 %\usepackage[margin=1in]{geometry}
 \usepackage{tabularx}
 \usepackage{xcolor}
-\usepackage{subcaption}
-\usepackage{placeins}
+\usepackage{float,subcaption,placeins}
 \usepackage{amssymb}
 \usepackage{amsmath}
 %\usepackage{amsthm}
@@ -15,7 +14,8 @@
 \usepackage{url}
 \usepackage[hidelinks]{hyperref}
 %\usepackage[authoryear]{natbib}
-
+\usepackage{lipsum}  
+\usepackage{etoc} 
 
 \newcommand{\note}[1]{\noindent{\textcolor{cyan}{\textbf{Note}: \textsf{#1}}}}
 \newcommand{\todo}[1]{\noindent{\textcolor{red}{\textbf{TODO}: \textsf{#1}}}}
@@ -40,6 +40,27 @@
 \newcommand{\bbrp}{\ensuremath{\bbR_+}}
 
 \newcommand{\parbold}[1]{~\\\noindent\textbf{#1}. }
+%\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+%\newcommand{\ceil}[1]{\lceil #1 \rceil}
+%\newcommand{\Halmos}{$\square$}
+
+\usepackage[group-separator={,}]{siunitx}
+\sisetup{
+	round-mode=places,
+	detect-mode,
+	detect-family,
+	detect-inline-family=math,
+}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+
+\newcommand\blfootnote[1]{%
+	\begingroup
+	\renewcommand\thefootnote{}\footnote{#1}%
+	\addtocounter{footnote}{-1}%
+	\endgroup
+}
+
 \newcommand{\floor}[1]{\lfloor #1 \rfloor}
 \newcommand{\ceil}[1]{\lceil #1 \rceil}
-%\newcommand{\Halmos}{$\square$}
